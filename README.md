@@ -1,4 +1,4 @@
-# ENPARA Güncel Döviz ve Altın Kurları (PHP Class & API)
+# ENPARA Güncel Döviz ve Altın Kurları
 
 Created on: <b>18.12.2021</b><br>
 Version : <b>`v1.0`</b>
