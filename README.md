@@ -1,7 +1,7 @@
 # ENPARA Güncel Döviz ve Altın Kurları
 
 Created on: <b>18.12.2021</b><br>
-Version : <b>`v1.0`</b>
+Version : <b>`v1.1`</b>
 
 Enpara güncel döviz ve altın kurları için yazılmış bir PHP Sınıfı<br/>
 Data [Enpara.com Döviz ve Altın Kurları](https://www.qnbfinansbank.enpara.com/hesaplar/doviz-ve-altin-kurlari) URL'inden <b>`file_get_contents()`</b> fonksiyonu ile çekilmektedir.<br>
