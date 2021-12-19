@@ -17,9 +17,9 @@ class Enpara {
         for($i=0; $i<=count($this->items)-1; $i++){
             preg_match_all($pattern2,$elemanlar[0][$i],$spans);
 
-            $this->enpara[$this->items[$i]]['alis'] = $this->kacBasamak($this->noktayaCevir($this->tlSil($spans[1][1])));
-            $this->enpara[$this->items[$i]]['satis'] = $this->kacBasamak($this->noktayaCevir($this->tlSil($spans[1][2])));
-            $this->enpara[$this->items[$i]]['makas'] = $this->kacBasamak($this->fark($spans[1][1], $spans[1][2]));
+            $this->enpara[$this->items[$i]]['alis'] = $this->kacBasamak($this->noktayaCevir($this->tlSil($this->noktaSil($spans[1][1]))));
+            $this->enpara[$this->items[$i]]['satis'] = $this->kacBasamak($this->noktayaCevir($this->tlSil($this->noktaSil($spans[1][2]))));
+            $this->enpara[$this->items[$i]]['makas'] = $this->kacBasamak($this->fark($this->noktaSil($spans[1][1]), $this->noktaSil($spans[1][2])));
         }
     }
 
@@ -29,6 +29,10 @@ class Enpara {
 
     private function noktayaCevir($str){
         return str_replace(',', '.', $str);
+    }
+
+    private function noktaSil($str){
+        return str_replace('.', '', $str);
     }
 
     private function tlSil($str){
@@ -64,13 +68,3 @@ class Enpara {
     }
 
 }
-
-    $enpara = new Enpara();
-    $enpara->basamak(6);
-    echo $enpara->makas('altin');
-    echo '<br/>';
-    $enpara->basamak(4);
-    echo $enpara->satis('usd');
-    echo '<br/>';
-    $enpara->basamak(0);
-    echo $enpara->json();
