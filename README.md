@@ -40,5 +40,5 @@ Ayrıca <b>`parite`</b> anahtar kelimesiyle EUR/USD Paritesine de ulaşılabilir
 ```
 
 # Demo
-Güncel JSON çıktısı için [Demo](https://iltekin.com/api/enpara.php)<br>
+Güncel JSON çıktısı için [Demo](https://code.iltekin.com/api/enpara.php)<br>
 Soru ve önerileriniz için bana sezer@iltekin.com adresinden ulaşabilirsiniz.
